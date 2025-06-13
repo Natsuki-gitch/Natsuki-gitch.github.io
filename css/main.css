@@ -504,15 +504,22 @@ h4 {
 }
 .gallery-thumbs > div {
   cursor: pointer;
+  width: 150px;       /* 好きなサイズに調整 */
+  height: 100px;      /* 好きなサイズに調整 */
+  overflow: hidden;   /* はみ出した部分を隠す */
+  margin-bottom: 10px;
 }
 .gallery-thumbs img {
   box-sizing: border-box;
   box-shadow: 0 0 0 5px transparent;
-  display: inline-block;
+  display: block;
   margin: 0 0 10px;
   opacity: 0.5;
   transition: all 0.5s ease-in-out;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+
 }
 .gallery-thumbs img:hover {
   opacity: 1;
