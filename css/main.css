@@ -15,43 +15,13 @@ summary, time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+
 body {
-  line-height: 1;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-strong, b {
-  font-weight: bold;
-}
-em, i {
-  font-style: italic;
-}
-a img {
-  border: none;
-}
-END RESET*/
-/* グローバルスタイル */
-body {
-   display: flex;
+  display: flex;
   flex-direction: column;
   font-family: helvetica, arial, sans;
   font-family: 'Open Sans', helvetica, arial, sans;
-   min-height: 100vh;
+  min-height: 100vh;
 }
 .content-container {
   display: column;
@@ -76,7 +46,7 @@ a {
 }
 p {
   line-height: 1.5;
-   margin: 0.75em 0;
+  margin: 0.75em 0;
 }
 
 h2 ~ p{
@@ -102,10 +72,21 @@ h4 {
 .header {
   background-color: #000;
   color: #fff;
- position: fixed;
+  position: fixed;
   width: 100%;
   z-index: 20;
 }
+
+.show-mobile-menu {
+  text-decoration: none; /* 念のため初期化 */
+  color: #c7dbfc; /* 確認しやすい色 */
+}
+
+.show-mobile-menu:hover {
+  text-decoration: underline;
+
+}
+
 .header-logo {
   background-color: #000;
   box-sizing: border-box;
@@ -346,6 +327,8 @@ h4 {
   position: absolute;
   transform: translate(-50%, 0);
 }
+
+
 .hero-home {
   background-image: url(/images/shark_resized.jpg);
   background-position: center top;
@@ -403,12 +386,12 @@ h4 {
 }
 
 .post-byline .social-link{
-   background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   color: #557c83;
 }
 
 .post-byline .social-link:hover{
- background-color: #000;
+  background-color: #000;
   color: #fff;
 
 }
@@ -444,13 +427,13 @@ h4 {
   margin-top: 1em;
 }
 .callout-title {
-   flex: 1 ;
+  flex: 1 ;
   font-size: 5.75vw;
   text-align: right;
   text-transform: uppercase;
 }
 .callout-copy {
- flex: 0 0 45em;
+  flex: 0 0 45em;
   font-size: 0.8rem;
   padding: 0 3vw;
 }
@@ -462,6 +445,8 @@ h4 {
   max-width: 960px;
   overflow: hidden;
 }
+
+
 .bio-box {
   box-sizing: border-box;
   float: left;
@@ -469,23 +454,43 @@ h4 {
   margin: 6rem 0 0;
   padding: 0 3%;
   width: 33%;
+  
 }
 .bio-box h3 {
-  color: #fff;
+  color: #ed2198;
   font-size: 1.5em;
   margin: -40px 0 1em;
   text-align: center;
-   text-transform: uppercase;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 20px;
+  font-weight: 900;
 }
+
+
 .bio-box img {
   width: 100%;
+  display: block; 
 }
+
+.bio-box-expansion {
+  transition: transform 0.3s ease;
+}
+
+.bio-box-expansion:hover {
+  transform: scale(1.1);
+}
+
+
 .bio-box .social-link {
-  display: block;
+  display: inline-block;
   margin: 2em 0 1em;
   margin: 2em auto 1em;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(255, 255, 255, 0.8);
   color: #557c83;
+  font-size: 0.8em;
+  position: relative;
+  top: -10px; 
 
 }
 
